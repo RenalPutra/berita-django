@@ -1,0 +1,48 @@
+{% extends 'back/base_back.html' %} {% load static %} {% block konten %}
+<div class="container-fluid">
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Add Informatics</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-7">
+        <form class="user" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control form-control-user"
+              id="exampleInputEmail"
+              aria-describedby="emailHelp"
+              placeholder="Judul"
+              name="judul"
+              value="{{value.judul}}"
+            />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Konten" name="konten1">
+{{value.konten}}</textarea
+            >
+          </div>
+          <div class="form-group">
+            <input
+              type="file"
+              class="py-4"
+              id="exampleInputEmail"
+              aria-describedby="emailHelp"
+              placeholder="gambar"
+              name="gambar"
+              value="{{value.picture}}"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-user btn-block">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock konten %}

@@ -1,0 +1,151 @@
+{% extends "front/base_front.html" %} {% load static %} {% block konten %}
+<body>
+  <div id="wrapper">
+    <!-- end market-header -->
+
+    <section class="section single-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="page-wrapper">
+              <div class="blog-title-area text-center">
+                <span class="color-orange"
+                  ><a href="" title="">{{data.date}}</a></span
+                >
+
+                <h3>{{data.judul}}</h3>
+
+                <div class="blog-meta big-meta">
+                  <small
+                    ><a href="{% url 'author' %}" title=""
+                      >{{data.penulis}}</a
+                    ></small
+                  >
+                </div>
+                <!-- end meta -->
+
+                <div class="post-sharing">
+                  <ul class="list-inline">
+                    <li>
+                      <a href="#" class="fb-button btn btn-primary"
+                        ><i class="fa fa-facebook"></i>
+                        <span class="down-mobile">Share on Facebook</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="tw-button btn btn-primary"
+                        ><i class="fa fa-twitter"></i>
+                        <span class="down-mobile">Tweet on Twitter</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="gp-button btn btn-primary"
+                        ><i class="fa fa-google-plus"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- end post-sharing -->
+              </div>
+              <!-- end title -->
+
+              <div class="single-post-media">
+                <img src="{{data.picture}}" alt="" class="img-fluid" />
+              </div>
+              <!-- end media -->
+
+              <div class="blog-content">
+                <div class="pp">
+                  <p>{{data.konten | safe}}</p>
+                </div>
+                <div>
+                  <div
+                    class="row justify-content-center align-items-center"
+                  ></div>
+                </div>
+                <!-- end pp -->
+              </div>
+              <!-- end content -->
+
+              <!-- end row -->
+
+              <hr class="invis1" />
+
+              <!-- end author-box -->
+
+              <hr class="invis1" />
+
+              <div class="custombox authorbox clearfix">
+                <h4 class="small-title">About author</h4>
+                <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    <img
+                      src="upload/author.jpg"
+                      alt=""
+                      class="img-fluid rounded-circle"
+                    />
+                  </div>
+                  <!-- end col -->
+
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                    <h4><a href="#">Bima Satria</a></h4>
+                    <p>
+                      Terima Kasih Telah Mengunjungi Website Berita Saya,<a
+                        href="{% url 'homepage' %}"
+                        >visit my website</a
+                      >
+                      Setiap orang adalah pemicu sedih. Terima kasih telah
+                      mengunjungi situs web saya, saya akan terus mendukung
+                      Anda. Siapa penulis saya? Duis tempus elit quis risus
+                      congue feugiat. Terima kasih telah mampir ke Blog
+                      Teknologi!
+                    </p>
+
+                    <div class="topsocial">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Facebook"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Youtube"
+                        ><i class="fa fa-youtube"></i
+                      ></a>
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Instagram"
+                        ><i class="fa fa-instagram"></i
+                      ></a>
+                    </div>
+                    <!-- end social -->
+                  </div>
+                  <!-- end col -->
+                </div>
+                <!-- end row -->
+              </div>
+              <!-- end author-box -->
+
+              <hr class="invis1" />
+            </div>
+            <!-- end page-wrapper -->
+          </div>
+          <!-- end col -->
+
+          <!-- end col -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+    <div class="dmtop">Scroll to Top</div>
+  </div>
+  <!-- end wrapper -->
+  {% endblock konten %}
+</body>
